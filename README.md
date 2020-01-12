@@ -19,15 +19,15 @@ DATABASE = "miniter"
 
 ```shell
 # 터미널에서 MySQL 접속
-$ mysql -u root -p
+> mysql -u root -p
 ```
 
 ```sql
 -- 데이터베이스 생성
-$ CREATE DATABASE miniter;
+> CREATE DATABASE miniter;
 
 -- 데이터베이스 접근
-$ USE miniter;
+> USE miniter;
 
 -- users 테이블 생성
 CREATE TABLE users(
