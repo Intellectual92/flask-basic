@@ -2,8 +2,6 @@
 
 [깔끔한 파이썬 탄탄한 백엔드] 도서 내용을 통해 기본 백엔드 개념 및 Flask 기본 개념을 학습했습니다.
 
-
-
 #### 환경설정 파일
 
 ```shell
@@ -13,6 +11,7 @@ PASSWORD = 설정 패스워드
 HOST = "localhost"
 PORT = 3306
 DATABASE = "miniter"
+JWT_SECREAT_KEY = "veryimportantkey"
 ```
 
 #### MySQL 셋팅 (6장)
