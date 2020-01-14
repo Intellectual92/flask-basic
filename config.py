@@ -10,3 +10,4 @@ db = {
 
 DB_URL = f"mysql+mysqlconnector://{db['user']}:{db['password']}@{db['host']}:{db['port']}/{db['database']}?charset=utf8"
 JWT_SECRET_KEY = os.environ.get("JWT_SECREAT_KEY")
+JWT_EXP_DELTA_SECONDS = 7 * 24 * 60 * 60

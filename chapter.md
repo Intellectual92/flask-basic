@@ -82,3 +82,21 @@
 - access token은 `JWT(JSON Web Token)을 사용해서 생성`될 수 있다. JWT는 이름 그대로 JSON 데이터를 token으로 변환하는 방식이다. JWT를 생성할 때 조심해야 할 점은 민감한 사용자의 개인정보는 포함시키지 말아야 한다는 것이다.
 
 - 인증 절차를 엔드포인트들에 적용시키기 위해서 `decorator를 사용`할 수 있다.
+
+### 8장
+
+- 시스템을 테스트하는 방법에는 크게 3가지가 있다. (UI test, integration test, unit test)
+
+- 전체 테스트 중 `UI test는 10%`, `integration test는 20%`, 그리고 나머지 `70%는 unit test`로 구성하는 것을 권장한다.
+
+- 파이썬에서 unit test 구현을 도와주는 라이브러리 중 하나는 `pytest`다.
+
+- test 파일의 이름은 `test_`로 시작해야 하며, 마찬가지로 test 함수도 `test_`로 시작되어야 한다.
+
+- `pytest.fixture decorator`를 사용하여 test 함수에 필요한 인자들을 제공할 수 있다.
+
+- `setup_function`과 `teardown_function`을 사용하여 각 `test 함수들이 실행되기 전에 필요한 test 데이터들을 생성`할 수 있고, 또한 각 test 함수들이 실행 종료된 후 test 데이터들을 삭제해 줄 수 있다.
+
+- 각 test 함수들은 서로에게 영향받지 않고 독립적으로 실행되어야 하기 때문에 test 데이터들을 삭제해 주는 것이 중요하다.
+
+- Flask의 test_client 함수를 통해 엔드포인트 함수들에 `가상의 HTTP 요청(request)을 보내고 응답(response)을 받을 수 있다.` 그러므로 test_client 함수를 사용해 unit test를 구현하면 unit test이지만 어느정도 integration test를 실행하는 효과도 볼 수 있다.
